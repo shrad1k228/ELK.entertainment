@@ -276,7 +276,7 @@
             <h1>🔥 MIND BLOWING IQ TEST 🔥</h1>
             <h4>ARE YOU SMARTER THAN 99% OF PEOPLE?</h4>
             <p>Challenge your brain with this insane test!</p>
-            <button id="start-button">START TEST</button>
+            <button id="start-button" onclick="startTest()">START TEST</button>
 
             <div class="info-section">
                 <h3>WHY TEST YOUR IQ?</h3>
@@ -294,10 +294,10 @@
         </div>
 
         <div id="quiz"></div>
-        <button id="result-button" style="display:none;">SHOW RESULTS</button>
+        <button id="result-button" onclick="calculateIQ()" style="display:none;">SHOW RESULTS</button>
         <div class="result-container" id="result" style="display:none;"></div>
         <div class="fact-container" id="fact" style="display:none;"></div>
-        <button id="menu-button" style="display:none;">BACK TO MENU</button>
+        <button id="menu-button" onclick="showMenu()" style="display:none;">BACK TO MENU</button>
 
         <footer>
             <p>© 2023-2025 ELK.entertainment</p>
@@ -306,6 +306,7 @@
 
     <script>
         let questionsData = [
+            // 5 kept from original (translated)
             { 
                 question: "What number continues the sequence: 2, 3, 5, 9, 17, ?", 
                 answers: ["25", "33", "29", "31"], 
@@ -313,10 +314,13 @@
                 explanation: "Each number = previous × 2 - 1 (3=2×2-1, 5=3×2-1, etc.)"
             },
             { 
+
                 question: "A cube-shaped container is completely filled with smaller identical cubes. If the total number of small cubes is 125, how many of these cubes touch the outer surface of the large cube? 🧊",
                 answers: ["81", "98", "100", "108"],
                 correct: 3,
                 explanation: "The large cube consists of 125 smaller cubes, meaning it has dimensions 5×5×5. The cubes that do not touch the surface form a smaller 3×3×3 cube inside, which contains 27 cubes. The total number of surface cubes is 125 - 27 = 98."
+
+
             },
             { 
                 question: "Which word doesn't belong: Orange, Guitar, Telescope, Banana?", 
@@ -325,7 +329,7 @@
                 explanation: "Telescope is the only word unrelated to music or fruits"
             },
             { 
-                question: "How many triangles are there in the image of a five-pointed star?",
+                 question: "How many triangles are there in the image of a five-pointed star?",
                 answers: ["5", "8", "10", "12"], 
                 correct: 3,
                 explanation: "5 small, 5 large, total 10 triangles",
@@ -333,14 +337,17 @@
                 imageUrl: "https://math.all-tests.ru/sites/math.all-tests.ru/files/images/300-problem.png",
                 imageAlt: "Five-pointed star with intersecting lines"
             },
+
             { 
                 question: "Which shape comes next: ◻, ◯, ◻, ◯, ◻, ?", 
                 answers: ["◯", "◻", "△", "◇"], 
                 correct: 1,
                 explanation: "Alternating square and circle"
             },
+
+            // 20 new questions
             { 
-                question: "which cube is correct??",
+               question: "which cube is correct??",
                 answers: ["1", "2", "3", "4", "5"], 
                 correct: 2,
                 explanation: "just look at it",
@@ -466,7 +473,7 @@
                 question: "A clock shows 3:15. What is the angle between the hour and the minute hands? ⏰",
                 answers: ["0°", "7.5°", "30°", "37.5°"],
                 correct: 3,
-                explanation: "Each hour on a clock represents 30° (360° / 12). The hour hand moves 7.5° per 15 minutes (30° × 15/60). The minute hand is at the 3 o'clock position (90°). The angle between them is 90° - 7.5° = 37.5°."
+                explanation: "Each hour on a clock represents 30° (360° / 12). The hour hand moves 7.5° per 15 minutes (30° × 15/60). The minute hand is at the 3 o'clock position (90°).   The angle between them is 90° - 7.5° = 37.5°."
             }
         ];
 
@@ -487,22 +494,8 @@
         let correctAnswers = 0;
         let currentQuestion = 0;
 
-        // DOM elements
-        const startButton = document.getElementById('start-button');
-        const resultButton = document.getElementById('result-button');
-        const menuButton = document.getElementById('menu-button');
-        const quizContainer = document.getElementById('quiz');
-        const resultContainer = document.getElementById('result');
-        const factContainer = document.getElementById('fact');
-        const mainMenu = document.getElementById('main-menu');
-
-        // Event listeners
-        startButton.addEventListener('click', startTest);
-        resultButton.addEventListener('click', calculateIQ);
-        menuButton.addEventListener('click', showMenu);
-
-        function checkAnswer(questionIndex, answerIndex) {
-            if (selectedQuestions[questionIndex].correct === answerIndex + 1) {
+        function checkAnswer(questionIndex, answer) {
+            if (selectedQuestions[questionIndex].correct === answer) {
                 correctAnswers++;
             }
 
@@ -511,7 +504,7 @@
                 document.querySelectorAll('.question')[questionIndex + 1].style.display = 'block';
                 updateProgressBar(questionIndex + 1);
             } else {
-                resultButton.style.display = 'block';
+                document.getElementById('result-button').style.display = 'block';
             }
         }
 
@@ -523,23 +516,23 @@
 
         function calculateIQ() {
             let iq = Math.floor((correctAnswers / selectedQuestions.length) * 200) + 10;
-            resultContainer.style.display = 'block';
-            resultContainer.innerHTML = `<p>Correct answers: ${correctAnswers} of ${selectedQuestions.length}</p><p>YOUR IQ: ${iq}</p>`;
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('result').innerHTML = `<p>Correct answers: ${correctAnswers} of ${selectedQuestions.length}</p><p>YOUR IQ: ${iq}</p>`;
 
             let fact = iqFacts.find(f => iq >= f.range[0] && iq <= f.range[1]).fact;
-            factContainer.style.display = 'block';
-            factContainer.innerHTML = `<p><strong>DID YOU KNOW?</strong> ${fact}</p>`;
+            document.getElementById('fact').style.display = 'block';
+            document.getElementById('fact').innerHTML = `<p><strong>DID YOU KNOW?</strong> ${fact}</p>`;
 
-            menuButton.style.display = 'block';
-            resultButton.style.display = 'none';
+            document.getElementById('menu-button').style.display = 'block';
+            document.getElementById('result-button').style.display = 'none';
         }
 
         function showMenu() {
-            mainMenu.style.display = 'block';
-            quizContainer.innerHTML = "";
-            resultContainer.style.display = 'none';
-            factContainer.style.display = 'none';
-            menuButton.style.display = 'none';
+            document.getElementById('main-menu').style.display = 'block';
+            document.getElementById('quiz').innerHTML = "";
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('fact').style.display = 'none';
+            document.getElementById('menu-button').style.display = 'none';
         }
 
         function shuffle(array) {
@@ -547,14 +540,15 @@
         }
 
         function startTest() {
-            mainMenu.style.display = 'none';
-            resultContainer.style.display = 'none';
-            factContainer.style.display = 'none';
-            menuButton.style.display = 'none';
-            resultButton.style.display = 'none';
-            quizContainer.innerHTML = "";
+            document.getElementById('main-menu').style.display = 'none';
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('fact').style.display = 'none';
+            document.getElementById('menu-button').style.display = 'none';
+            document.getElementById('result-button').style.display = 'none';
+            document.getElementById('quiz').innerHTML = "";
 
             selectedQuestions = shuffle([...questionsData]).slice(0, 25);
+            score = 0;
             correctAnswers = 0;
             currentQuestion = 0;
 
@@ -564,13 +558,12 @@
                 </div>
                 <div id="progress-text" class="progress-text">0/${selectedQuestions.length}</div>
             `;
-            quizContainer.innerHTML = progressHTML;
+            document.getElementById('quiz').innerHTML = progressHTML;
 
             selectedQuestions.forEach((q, index) => {
                 let questionDiv = document.createElement('div');
                 questionDiv.classList.add('question');
                 questionDiv.dataset.index = index;
-                questionDiv.style.display = 'none';
 
                 let questionContent = `
                     <p class='question-counter'>QUESTION ${index + 1} OF ${selectedQuestions.length}</p>
@@ -583,15 +576,12 @@
                     `;
                 }
 
-                q.answers.forEach((answer, i) => {
-                    const answerButton = document.createElement('button');
-                    answerButton.textContent = answer;
-                    answerButton.addEventListener('click', () => checkAnswer(index, i));
-                    questionDiv.appendChild(answerButton);
-                });
+                questionContent += q.answers.map((ans, i) => 
+                    `<button onclick="checkAnswer(${index}, ${i + 1})">${ans}</button>`
+                ).join(" ");
 
-                questionDiv.innerHTML += questionContent;
-                quizContainer.appendChild(questionDiv);
+                questionDiv.innerHTML = questionContent;
+                document.getElementById('quiz').appendChild(questionDiv);
             });
 
             document.querySelectorAll('.question')[0].style.display = 'block';
