@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5288248094648419"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 INSANE IQ TEST 🔥</title>
+    <style>
+        :root {
+            --primary: #ff3e6c;
+            --primary-dark: #ff1a5e;
+            --secondary: #00d2ff;
+            --light: #f8f9fa;
+            --dark: #0f0f13;
+            --gray: #a0a0a0;
+            --success: #00ff88;
+            --border-radius: 16px;
+            --box-shadow: 0 8px 30px rgba(255, 62, 108, 0.3);
+            --transition: all 0.3s ease;
+            --neon-glow: 0 0 10px rgba(0, 210, 255, 0.8);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background: linear-gradient(135deg, #0f0f13 0%, #1e1e2a 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: rgba(15, 15, 19, 0.8);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            box-shadow: var(--neon-glow);
+        }
+
+        .menu {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--secondary);
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+            text-shadow: 0 0 15px rgba(0, 210, 255, 0.5);
+        }
+
+        h4 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: var(--secondary);
+            margin: 25px 0 15px;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+
+        .question {
+            margin: 30px auto;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 20px 0;
+            height: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            width: 0%;
+            transition: width 0.4s ease;
+            border-radius: 10px;
+            box-shadow: var(--neon-glow);
+        }
+
+        .progress-text {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+
+        .result-container {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 30px auto;
+            border: 2px solid var(--secondary);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            background-color: rgba(0, 210, 255, 0.05);
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            box-shadow: var(--neon-glow);
+        }
+
+        .fact-container {
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(255, 62, 108, 0.2);
+        }
+
+        .question-counter {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .complex-question {
+            font-weight: 600;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            color: white;
+        }
+
+        button {
+            font-size: 1rem;
+            padding: 12px 25px;
+            margin: 8px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 62, 108, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 6px 20px rgba(255, 62, 108, 0.6);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        #start-button {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            box-shadow: 0 5px 25px rgba(255, 62, 108, 0.5);
+        }
+
+        #menu-button, #result-button {
+            display: inline-block;
+            margin: 20px auto;
+        }
+
+        .matrix {
+            font-family: monospace;
+            white-space: pre;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            display: inline-block;
+            color: var(--success);
+        }
+
+        .star-image {
+            max-width: 100%;
+            height: auto;
+            margin: 25px auto;
+            display: block;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .star-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 35px rgba(0, 210, 255, 0.4);
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .info-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 25px 0;
+            border-left: 4px solid var(--secondary);
+            box-shadow: 0 4px 20px rgba(0, 210, 255, 0.1);
+        }
+
+        .info-section p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 15px auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin: 5px;
+            }
+
+            #start-button {
+                padding: 12px 30px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="menu" id="main-menu">
+            <h1>🔥 MIND BLOWING IQ TEST 🔥</h1>
+            <h4>ARE YOU SMARTER THAN 99% OF PEOPLE?</h4>
+            <p>Challenge your brain with this insane test!</p>
+            <button id="start-button" onclick="startTest()">START TEST</button>
+
+            <div class="info-section">
+                <h3>WHY TEST YOUR IQ?</h3>
+                <p>🚀 Unlock your cognitive potential</p>
+                <p>🎓 Academic success predictor</p>
+                <p>💼 Career advantage</p>
+                <p>🧠 Understand your brain power</p>
+            </div>
+
+            <div class="info-section">
+                <h3>WHAT IS IQ?</h3>
+                <p>IQ measures your problem-solving and reasoning abilities compared to others. It's like a brain performance score!</p>
+                <p>While IQ tests measure logical thinking, they don't account for creativity, emotional intelligence, or street smarts - so don't stress too much!</p>
+            </div>
+        </div>
+
+        <div id="quiz"></div>
+        <button id="result-button" onclick="calculateIQ()" style="display:none;">SHOW RESULTS</button>
+        <div class="result-container" id="result" style="display:none;"></div>
+        <div class="fact-container" id="fact" style="display:none;"></div>
+        <button id="menu-button" onclick="showMenu()" style="display:none;">BACK TO MENU</button>
+
+        <footer>
+            <p>© 2023-2025 ELK.entertainment</p>
+        </footer>
+    </div>
+
+    <script>
+        let questionsData = [
+            // 5 kept from original (translated)
+            { 
+                question: "What number continues the sequence: 2, 3, 5, 9, 17, ?", 
+                answers: ["25", "33", "29", "31"], 
+                correct: 2,
+                explanation: "Each number = previous × 2 - 1 (3=2×2-1, 5=3×2-1, etc.)"
+            },
+            { 
+                question: "If all Flips are Flops, and all Flops are Fleaps, then are all Flips necessarily Fleaps?", 
+                answers: ["Yes", "No", "Not enough data"], 
+                correct: 1,
+                explanation: "Classic logic chain: A⊂B⊂C ⇒ A⊂C"
+            },
+            { 
+                question: "Which word doesn't belong: Orange, Guitar, Telescope, Banana?", 
+                answers: ["Orange", "Guitar", "Telescope", "Banana"], 
+                correct: 2,
+                explanation: "Telescope is the only word unrelated to music or fruits"
+            },
+            { 
+                 question: "How many triangles are there in the image of a five-pointed star?",
+                answers: ["5", "8", "10", "12"], 
+                correct: 3,
+                explanation: "5 small, 5 large, total 10 triangles",
+                hasImage: true,
+                imageUrl: "https://math.all-tests.ru/sites/math.all-tests.ru/files/images/300-problem.png",
+                imageAlt: "Five-pointed star with intersecting lines"
+            },
+ 
+            { 
+                question: "Which shape comes next: ◻, ◯, ◻, ◯, ◻, ?", 
+                answers: ["◯", "◻", "△", "◇"], 
+                correct: 1,
+                explanation: "Alternating square and circle"
+            },
+            
+            // 20 new questions
+            { 
+               question: "which cube is correct??",
+                answers: ["1", "2", "3", "4", "5"], 
+                correct: 2,
+                explanation: "just look at it",
+                hasImage: true,
+                imageUrl: "https://shkolabuduschego.ru/wp-content/uploads/2016/05/1550408956573754ed04ca39.56927577.png",
+                imageAlt: "cube" 
+            },
+           { 
+                question: "What number is missing: 2, 6, 12, 20, ?, 42", 
+                answers: ["30", "28", "32", "36"], 
+                correct: 1,
+                explanation: "Sequence: 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42"
+            },
+            { 
+                question: "Four people play chess. They played 4 games and each won 2 games. How?", 
+                answers: ["Different tournaments", "One game canceled", "They played in pairs", "Impossible"], 
+                correct: 3,
+                explanation: "They played in teams of 2, each team won 2 games"
+            },
+            { 
+                question: "A box has 5 white socks, 7 black, and 4 gray. How many socks to guarantee a matching pair?", 
+                answers: ["2", "3", "4", "5"], 
+                correct: 3,
+                explanation: "With 4 socks, you must have at least one pair (only 3 colors)"
+            },
+            { 
+                question: "Three cats caught 3 mice (one each). How many mice remain?", 
+                answers: ["0", "1", "3", "Depends"], 
+                correct: 1,
+                explanation: "All mice were caught if each cat got one"
+            },
+            { 
+                question: "Multiply 999 by 1001", 
+                answers: ["999999", "1001999", "1000999", "1001999"], 
+                correct: 1,
+                explanation: "999 × 1001 = 999 × (1000 + 1) = 999000 + 999 = 999999"
+            },
+            { 
+                question: "Next in sequence: 1, 4, 9, 16, 25, ?", 
+                answers: ["30", "36", "42", "49"], 
+                correct: 2,
+                explanation: "Squares: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25, 6²=36"
+            },
+            { 
+                question: "Divide 30 by half and add 10. Result?", 
+                answers: ["25", "40", "50", "70"], 
+                correct: 4,
+                explanation: "30 ÷ (1/2) = 60, 60 + 10 = 70"
+            },
+            { 
+                question: "Complete: 5 → 25, 6 → 36, 7 → ?", 
+                answers: ["42", "48", "49", "56"], 
+                correct: 3,
+                explanation: "Number squared: 5×5=25, 6×6=36, 7×7=49"
+            },
+            { 
+                question: "If 4+3=25, 5+2=27, 6+1=30, then 7+0=?", 
+                answers: ["28", "35", "31", "32"], 
+                correct: 3,
+                explanation: "Pattern: (a + b) × (a - b) + (a + b)"
+            },
+            { 
+                question: "Which word doesn't fit?", 
+                answers: ["Joy", "Sadness", "Fun", "Happiness"], 
+                correct: 2,
+                explanation: "Sadness is the only negative emotion listed"
+            },
+            { 
+                question: "Anagram of 'SWALLOW'", 
+                answers: ["WALLOWS", "SLOWLAW", "WALLSOW", "SOWLLAW"], 
+                correct: 1,
+                explanation: "Correct anagram is 'WALLOWS'"
+            },
+            { 
+                question: "What relates to 'night', 'darkness', 'sleep'?", 
+                answers: ["Star", "Moon", "Drowsiness", "Pillow"], 
+                correct: 2,
+                explanation: "Moon is associated with night and darkness"
+            },
+            { 
+                question: "Odd one out:", 
+                answers: ["Tree", "Bush", "Grass", "Mountain"], 
+                correct: 4,
+                explanation: "Mountain is not a plant"
+            },
+            { 
+                question: "Which word has two errors?", 
+                answers: ["Mistake", "Mistook", "Mistuk", "Mistukee"], 
+                correct: 4,
+                explanation: "Two spelling errors in 'Mistukee'"
+            },
+            { 
+                question: "Rotate 'N' 180°. What letter appears?", 
+                answers: ["Z", "U", "M", "W"], 
+                correct: 1,
+                explanation: "N rotated becomes Z"
+            },
+            { 
+                question: "How many cubes at pyramid base if total is 30?", 
+                answers: ["9", "10", "14", "16"], 
+                correct: 1,
+                explanation: "Symmetrical pyramid likely has 9 at base"
+            },
+            { 
+                question: "Combine two cubes. Total volume?", 
+                answers: ["Sum of volumes", "Difference", "Product", "Depends on arrangement"], 
+                correct: 1,
+                explanation: "Volumes always add regardless of arrangement"
+            },
+            { 
+                question: "Next number: 3, 6, 12, 24, ?, 96", 
+                answers: ["36", "48", "50", "72"], 
+                correct: 2,
+                explanation: "Each number ×2: 3×2=6, 6×2=12, etc."
+            },
+            { 
+                question: "If Vanya has 3 brothers, and each brother has 3 brothers, how many brothers total?", 
+                answers: ["3", "6", "9", "12"], 
+                correct: 1,
+                explanation: "Vanya + 3 brothers = same 3 brothers for each"
+            },
+            { 
+                question: "If 'CAT'=312 and 'SOCK'=521, what's 'TOK'?", 
+                answers: ["132", "312", "213", "231"], 
+                correct: 4,
+                explanation: "Letter position coding: T=2, O=1, K=3 → 213"
+            }
+        ];
+
+        const iqFacts = [
+            { range: [0, 69], fact: "Below average. The average IQ is 100. Remember - IQ tests only measure certain types of intelligence!" },
+            { range: [70, 89], fact: "Slightly below average. As Einstein said: 'Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid.'" },
+            { range: [90, 109], fact: "Average! About 50% of people score here. Fun fact: Nobel Prize winners average about 145 IQ." },
+            { range: [110, 129], fact: "Above average! Bill Gates and Stephen Hawking scored around 160." },
+            { range: [130, 144], fact: "Highly intelligent! You're in the top 2%. Terence Tao, mathematician, has one of the highest recorded IQs at 225-230." },
+            { range: [145, 159], fact: "Exceptionally gifted! Top 0.1%. Marilyn vos Savant (IQ 228) writes for Parade magazine." },
+            { range: [160, 179], fact: "Genius level! Top 0.003%. Kim Ung-yong spoke 4 languages and solved calculus at age 4." },
+            { range: [180, 200], fact: "Extraordinary! Top 0.0001%. IQ can fluctuate 20+ points over your lifetime." },
+            { range: [201, 300], fact: "Mind-blowing! If accurate, you're on par with historical geniuses. Remember - IQ doesn't measure creativity or emotional intelligence!" }
+        ];
+
+        let selectedQuestions = [];
+        let score = 0;
+        let correctAnswers = 0;
+        let currentQuestion = 0;
+
+        function checkAnswer(questionIndex, answer) {
+            if (selectedQuestions[questionIndex].correct === answer) {
+                correctAnswers++;
+            }
+
+            document.querySelectorAll('.question')[questionIndex].style.display = 'none';
+            if (questionIndex < selectedQuestions.length - 1) {
+                document.querySelectorAll('.question')[questionIndex + 1].style.display = 'block';
+                updateProgressBar(questionIndex + 1);
+            } else {
+                document.getElementById('result-button').style.display = 'block';
+            }
+        }
+
+        function updateProgressBar(currentQuestionIndex) {
+            const progressPercentage = ((currentQuestionIndex + 1) / selectedQuestions.length) * 100;
+            document.getElementById('progress-bar').style.width = `${progressPercentage}%`;
+            document.getElementById('progress-text').textContent = `${currentQuestionIndex + 1}/${selectedQuestions.length}`;
+        }
+
+        function calculateIQ() {
+            let iq = Math.floor((correctAnswers / selectedQuestions.length) * 200) + 10;
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('result').innerHTML = `<p>Correct answers: ${correctAnswers} of ${selectedQuestions.length}</p><p>YOUR IQ: ${iq}</p>`;
+
+            let fact = iqFacts.find(f => iq >= f.range[0] && iq <= f.range[1]).fact;
+            document.getElementById('fact').style.display = 'block';
+            document.getElementById('fact').innerHTML = `<p><strong>DID YOU KNOW?</strong> ${fact}</p>`;
+
+            document.getElementById('menu-button').style.display = 'block';
+            document.getElementById('result-button').style.display = 'none';
+        }
+
+        function showMenu() {
+            document.getElementById('main-menu').style.display = 'block';
+            document.getElementById('quiz').innerHTML = "";
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('fact').style.display = 'none';
+            document.getElementById('menu-button').style.display = 'none';
+        }
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        function startTest() {
+            document.getElementById('main-menu').style.display = 'none';
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('fact').style.display = 'none';
+            document.getElementById('menu-button').style.display = 'none';
+            document.getElementById('result-button').style.display = 'none';
+            document.getElementById('quiz').innerHTML = "";
+
+            selectedQuestions = shuffle([...questionsData]).slice(0, 25);
+            score = 0;
+            correctAnswers = 0;
+            currentQuestion = 0;
+
+            const progressHTML = `
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                <div id="progress-text" class="progress-text">0/${selectedQuestions.length}</div>
+            `;
+            document.getElementById('quiz').innerHTML = progressHTML;
+
+            selectedQuestions.forEach((q, index) => {
+                let questionDiv = document.createElement('div');
+                questionDiv.classList.add('question');
+                questionDiv.dataset.index = index;
+
+                let questionContent = `
+                    <p class='question-counter'>QUESTION ${index + 1} OF ${selectedQuestions.length}</p>
+                    <p class='complex-question'>${q.question}</p>
+                `;
+
+                if (q.hasImage) {
+                    questionContent += `
+                        <img class="star-image" src="${q.imageUrl}" alt="${q.imageAlt}">
+                    `;
+                }
+
+                questionContent += q.answers.map((ans, i) => 
+                    `<button onclick="checkAnswer(${index}, ${i + 1})">${ans}</button>`
+                ).join(" ");
+
+                questionDiv.innerHTML = questionContent;
+                document.getElementById('quiz').appendChild(questionDiv);
+            });
+
+            document.querySelectorAll('.question')[0].style.display = 'block';
+            updateProgressBar(0);
+        }
+    </script>
+</body>
+</html>
